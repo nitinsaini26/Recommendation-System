@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Movie Recommendation System</h1>
+
+        <div class="mb-6">
+            <p class="text-gray-700 mb-2">Enter your preferences (comma-separated):</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label for="genres" class="block text-sm font-medium text-gray-700 mb-1">Preferred Genres:</label>
+                    <input type="text" id="genres" placeholder="Action, Sci-Fi, Drama"
+                           class="input-box">
+                </div>
+                <div>
+                    <label for="directors" class="block text-sm font-medium text-gray-700 mb-1">Preferred Directors:</label>
+                    <input type="text" id="directors" placeholder="Christopher Nolan"
+                           class="input-box">
+                </div>
+                <div>
+                    <label for="actors" class="block text-sm font-medium text-gray-700 mb-1">Preferred Actors:</label>
+                    <input type="text" id="actors" placeholder="Tom Hanks"
+                           class="input-box">
+                </div>
+            </div>
+        </div>
+
+        <button id="recommendButton" class="recommend-button">
+            Get Recommendations
+        </button>
+
+        <div id="recommendationsList" class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Recommended Movies:</h2>
+            <div id="resultsContainer" class="space-y-4">
+                <p class="text-gray-500 text-center">Enter your preferences and click "Get Recommendations" to see suggestions.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
